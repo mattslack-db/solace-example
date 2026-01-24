@@ -1,0 +1,26 @@
+[project]
+name = "solace-example"
+version = "0.1.0"
+description = "Solace producer and PySpark consumer examples"
+requires-python = ">=3.10"
+dependencies = [
+    "solace-pubsubplus>=1.8.0",
+    "faker>=28.0.0",
+    "pyspark>=3.5.0,<4.0.0",
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+solace-producer = "solace_producer.__main__:main"
+solace-consumer = "solace_consumer.__main__:main"
+
+[project.optional-dependencies]
+delta = ["delta-spark>=3.0.0"]
+dev = ["pytest>=8.0.0", "pytest-cov>=4.0.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["solace_producer", "solace_consumer"]
