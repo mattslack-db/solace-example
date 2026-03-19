@@ -121,8 +121,10 @@ solace-example/
 │   ├── test_consumer.py       # Consumer unit tests
 │   ├── test_setup_queue.py    # Setup script tests
 │   └── test_integration.py    # Integration tests (requires Solace)
-├── solace_producer_demo.ipynb # Producer demo notebook
-├── solace_consumer_demo.ipynb # Consumer demo notebook
+├── notebooks/
+│   ├── solace_local_install.ipynb  # Local Solace setup
+│   ├── solace_producer_demo.ipynb  # Producer demo notebook
+│   └── solace_consumer_demo.ipynb  # Consumer demo notebook
 ├── pyproject.toml             # Package configuration
 └── README.md
 ```
@@ -206,8 +208,8 @@ pytest tests/test_integration.py -v
    - Maven coordinates: `com.solacecoe.connectors:pubsubplus-connector-spark:3.1.6`
 
 2. Upload the notebooks to your workspace:
-   - `solace_producer_demo.ipynb`
-   - `solace_consumer_demo.ipynb`
+   - `notebooks/solace_producer_demo.ipynb`
+   - `notebooks/solace_consumer_demo.ipynb`
 
 3. Update connection settings for your Solace Cloud or broker instance.
 
