@@ -210,6 +210,7 @@ pytest tests/test_integration.py -v
 2. Upload the notebooks to your workspace:
    - `notebooks/solace_producer_demo.ipynb`
    - `notebooks/solace_consumer_demo.ipynb`
+   - `notebooks/solace_local_install.ipynb`
 
 3. Update connection settings for your Solace Cloud or broker instance.
 
@@ -217,6 +218,8 @@ pytest tests/test_integration.py -v
    ```python
    SOLACE_PASSWORD = dbutils.secrets.get(scope="solace", key="password")
    ```
+
+5. **Local install notebook** (`solace_local_install.ipynb`): Sets up a local Solace PubSub+ broker using Colima and Docker (or docker-compose) so you can run the producer/consumer demos without Solace Cloud. **For testing only**—uses default credentials (admin/admin), a single-node container, and is not suitable for production.
 
 ## Links
 
